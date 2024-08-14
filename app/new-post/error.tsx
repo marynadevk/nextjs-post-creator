@@ -1,12 +1,6 @@
 'use client';
 
-import { FC } from 'react';
-
-type NewPostErrorProps = {
-  error: Error;
-};
-
-export const NewPostError: FC<NewPostErrorProps> = ({ error }) => {
+export default function NewPostError({ error }: any) {
   return (
     <>
       <h2>An error occurred!</h2>

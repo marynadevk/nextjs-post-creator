@@ -1,8 +1,6 @@
 import { createPost } from '@/actions/posts';
 import { PostForm } from '@/components/post-form';
 
-const NewPostPage = () => {
+export default function NewPostPage() {
   return <PostForm action={createPost} />;
 };
-
-export default NewPostPage;
