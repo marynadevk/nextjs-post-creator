@@ -9,7 +9,10 @@ type FormState = {
 };
 
 type PostFormProps = {
-  action: (state: FormState, formData: FormData) => FormState | Promise<FormState>;
+  action: (
+    state: FormState,
+    formData: FormData
+  ) => FormState | Promise<FormState>;
 };
 
 export const PostForm: FC<PostFormProps> = ({ action }) => {
@@ -24,7 +27,7 @@ export const PostForm: FC<PostFormProps> = ({ action }) => {
           <input type="text" id="title" name="title" />
         </p>
         <p className="form-control">
-          <label htmlFor="image">Image URL</label>
+          <label htmlFor="image">Image</label>
           <input
             type="file"
             accept="image/png, image/jpeg"
@@ -34,7 +37,7 @@ export const PostForm: FC<PostFormProps> = ({ action }) => {
         </p>
         <p className="form-control">
           <label htmlFor="content">Content</label>
-          <textarea id="content" name="content" rows={5} />
+          <textarea id="content" name="content" rows="5" />
         </p>
         <p className="form-actions">
           <FormSubmit />
@@ -49,4 +52,4 @@ export const PostForm: FC<PostFormProps> = ({ action }) => {
       </form>
     </>
   );
-}
+};

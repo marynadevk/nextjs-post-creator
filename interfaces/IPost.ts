@@ -5,4 +5,6 @@ export interface IPost {
   image: string;
   userFirstName: string;
   createdAt: string;
+  likes?: number;
+  isLiked?: boolean;
 }

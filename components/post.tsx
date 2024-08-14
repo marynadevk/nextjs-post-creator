@@ -5,9 +5,10 @@ import { IPost } from '@/interfaces/IPost';
 
 type PostProps = {
   post: IPost;
+  action: (postId: string) => void;
 };
 
-export const Post: FC<PostProps> = ({ post }) => {
+export const Post: FC<PostProps> = ({ post, action }) => {
   return (
     <article className="post">
       <div className="post-image">
@@ -25,7 +26,12 @@ export const Post: FC<PostProps> = ({ post }) => {
             </p>
           </div>
           <div>
-            <LikeButton />
+            <form
+              action={action.bind(null, post.id)}
+              className={post.isLiked ? 'liked' : ''}
+            >
+              <LikeButton />
+            </form>
           </div>
         </header>
         <p>{post.content}</p>
