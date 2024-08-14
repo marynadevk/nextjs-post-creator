@@ -47,7 +47,7 @@ function initDb() {
 
 initDb();
 
-export async function getPosts(maxNumber: number) {
+export const getPosts = async (maxNumber?: number) => {
   let limitClause = '';
 
   if (maxNumber) {

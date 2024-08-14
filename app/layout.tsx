@@ -1,23 +1,21 @@
-import { Header } from '@/components/header';
+import type { Metadata } from 'next';
 import './globals.css';
-import { FC, ReactNode } from 'react';
+import { Header } from '@/components/header';
 
-export const metadata = {
-  title: 'NextPosts',
-  description: 'Browse and share amazing posts.',
+export const metadata: Metadata = {
+  title: 'Posts App',
+  description: 'Browse and share amazing posts',
 };
 
-type RootLayoutProps = {
-  children: ReactNode;
-};
-
-export const RootLayout: FC<RootLayoutProps> = ({ children }) => {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
-      </body>
+      <Header />
+      <body>{children}</body>
     </html>
   );
-};
+}

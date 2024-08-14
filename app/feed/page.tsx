@@ -1,8 +1,8 @@
-import Posts from '@/components/posts';
-import { getPosts } from '@/lib/posts';
+import { Posts } from '@/components/posts';
+import { getPosts } from '@/lib/posts-db';
 
-export const FeedPage = async () => {
-  const posts = await getPosts();
+const FeedPage = async () => {
+  const posts: any = await getPosts();
   return (
     <>
       <h1>All posts by all users</h1>
@@ -10,3 +10,5 @@ export const FeedPage = async () => {
     </>
   );
 };
+
+export default FeedPage;

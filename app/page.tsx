@@ -1,8 +1,6 @@
 import { Suspense } from 'react';
-
 import { Posts } from '@/components/posts';
 import { getPosts } from '@/lib/posts-db';
-import { IPostData } from '@/interfaces/IPostData';
 
 export const LatestPosts = async () => {
   const latestPosts: any = await getPosts(2);
@@ -21,4 +19,4 @@ export default async function Home() {
       </section>
     </>
   );
-}
+};
