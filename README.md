@@ -22,8 +22,7 @@
 1. **Clone the repository:**
 
 ```sh
-git clone <https://github.com/marynadevk/graphql-job-board.git>
-cd blogapp
+git clone <https://github.com/marynadevk/nextjs-post-creator.git>
 ```
 2. **Install dependencies for both frontend and backend:**
 ```sh
